@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
+            background-color: #00BFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background-color: #00BFFF;
+        }
+        .form-table th {
+            text-align: center;
+            background-color: #FFFFE0;
+            color: red;
+            font-size: 24px;
+            padding: 15px;
+        }
+        .form-table td {
+            padding: 15px;
+        }
+        .form-table input[type="text"],
+        .form-table input[type="password"],
+        .form-table textarea,
+        .form-table select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-table input[type="file"] {
+            margin-bottom: 10px;
+        }
+        .form-table input[type="radio"],
+        .form-table input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .form-table .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-table .buttons input {
+            width: 30%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: #007BFF;
+            cursor: pointer;
+        }
+        .form-table .buttons input:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form action="/submit" method="post" autocomplete="on">
+        <table border="4" class="form-table" >
+            <tr>
+                <th colspan="2">Registration Form</th>
+            </tr>
+            <tr>
+                <td><label for="name">Enter Name</label></td>
+                <td><input type="text" id="name" name="name" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Enter Password</label></td>
+                <td><input type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td><label for="address">Enter Address</label></td>
+                <td><textarea id="address" name="address" rows="4" required></textarea></td>
+            </tr>
+            <tr>
+                <td>Select Game</td>
+                <td>
+                    <input type="checkbox" id="hockey" name="game" value="hockey">
+                    <label for="hockey">Hockey</label><br>
+                    <input type="checkbox" id="football" name="game" value="football">
+                    <label for="football">Football</label><br>
+                    <input type="checkbox" id="badminton" name="game" value="badminton">
+                    <label for="badminton">Badminton</label><br>
+                    <input type="checkbox" id="cricket" name="game" value="cricket">
+                    <label for="cricket">Cricket</label><br>
+                    <input type="checkbox" id="volleyball" name="game" value="volleyball">
+                    <label for="volleyball">Volleyball</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="age">Select your age</label></td>
+                <td>
+                    <input type="text" id="age" 
+                        placeholder="Select age" list="age group"/>
+                        <datalist id = "age group">
+                            <option value="">
+                            <option value="under 18">
+                            <option value="18-25">
+                            <option value="26-35">
+                            <option value="36-45">
+                            <option value="46-60">
+                            <option value="above 60">
+                        </datalist>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label for="photo">Select Photo</label></td>
+                <td><input type="file" id="photo" name="photo" required></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="buttons">
+                        <input type="button" value="Click Me">
+                        <input type="reset" value="Reset">
+                        <input type="submit" value="Submit Form">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
